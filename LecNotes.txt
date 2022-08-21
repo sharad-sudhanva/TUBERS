@@ -1,7 +1,0 @@
-Tubers -- freelancing based webapp
-
-Tech stack: 
-Frontend - HTML,CSS,JS
-Backend - Python (Django frame work)
-DB - Postgresql
-
