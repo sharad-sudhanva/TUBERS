@@ -38,11 +38,11 @@ def register(request):
         
         if password == confirm_password:
             if User.objects.filter(username=username).exists():
-                messages.error(request, 'User already exists')
+                messages.warning(request, 'User already exists')
                 return redirect('register')
             else:
                 if User.objects.filter(email=email).exists():
-                    messages.error(request, 'Email already exists')
+                    messages.warning(request, 'Email already exists')
                     return redirect('register')
                 else:
 
@@ -52,7 +52,7 @@ def register(request):
                     return redirect('login')
 
         else:
-            messages.error(request, 'Passwords do not match')
+            messages.warning(request, 'Passwords do not match')
             return redirect('register')
        
 
